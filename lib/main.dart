@@ -2,7 +2,6 @@ import 'package:expense_tracker/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'presentation/auth/login_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
