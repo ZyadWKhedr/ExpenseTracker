@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'core/shared_prefs.dart';
 import 'presentation/auth/login_page.dart';
 
 void main() async {
@@ -9,8 +8,9 @@ void main() async {
 
   // Initialize Supabase
   await Supabase.initialize(
-    url: "https://your-project.supabase.co",
-    anonKey: "your-anon-key",
+    url: "https://alzuhhylpsllcyprrezd.supabase.co",
+    anonKey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFsenVoaHlscHNsbGN5cHJyZXpkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE1MjQyODYsImV4cCI6MjA1NzEwMDI4Nn0.E_An4K2Z9XwQaIfaiZ9_j3B9iej3dywkOBeAPcKC5tk",
   );
 
   runApp(ProviderScope(child: const MyApp()));
@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),  // Start with login
+      home: LoginPage(), // Start with login
     );
   }
 }
+// vU@*4_Q.3P4$vJx
