@@ -8,7 +8,7 @@ import 'package:go_router/go_router.dart';
 final GoRouter router = GoRouter(
   routes: [
     GoRoute(
-      path: '/',
+      path: '/qweqwe',
       pageBuilder: (context, state) => CustomTransitionPage(
         child: SplashScreen(),
         transitionsBuilder: _fadeTransition, // Apply fade animation
@@ -22,7 +22,7 @@ final GoRouter router = GoRouter(
       ),
     ),
      GoRoute(
-      path: '/login',
+      path: '/',
       pageBuilder: (context, state) => CustomTransitionPage(
         child: LoginPage(),
         transitionsBuilder: _slideTransition, // Apply slide animation

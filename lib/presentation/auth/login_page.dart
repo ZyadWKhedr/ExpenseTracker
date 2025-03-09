@@ -3,6 +3,7 @@ import 'package:expense_tracker/presentation/widgets/custom_button.dart';
 import 'package:expense_tracker/presentation/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginPage extends ConsumerStatefulWidget {
   const LoginPage({super.key});
@@ -20,7 +21,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     await auth.login(emailController.text, passwordController.text);
     if (ref.read(authProvider) != null) {
       // Navigate to home screen after successful login
-      Navigator.pushReplacementNamed(context, "/home");
+      () => context.go('/home');
     }
   }
 
@@ -42,10 +43,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
             SizedBox(height: 20),
             CustomButton(text: "Login", onPressed: login),
             TextButton(
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SignUpPage()),
-              ),
+              onPressed: () => context.go('/signup'),
               child: Text("Don't have an account? Sign Up"),
             ),
           ],
